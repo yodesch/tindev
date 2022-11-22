@@ -18,6 +18,9 @@ class DevsController < ApplicationController
     @dev.destroy
   end
 
+  def show
+  end
+
   private
 
   def set_dev
