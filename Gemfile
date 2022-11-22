@@ -77,3 +77,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "cloudinary", "~> 1.23"
+
+gem "awesome_print", "~> 1.9"

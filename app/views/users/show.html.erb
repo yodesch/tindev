@@ -1,1 +1,47 @@
-<h1>Hi</h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    Tindev
+    <h1 class="text-center"><%= "Welcome Yoann" %></h1>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <%# if user_signed_in? %>
+          <%= form_with url: "/search", method: :get do |form| %>
+            <%= form.text_field :query, placeholder: "Search" %>
+            <%= form.submit "Search", class: "btn btn-outline-success" %>
+            <%= link_to "Add Dev", "#", class: "btn btn-outline-primary" %>
+          <% end %>
+          <%#= link_to "Add Dev", new_Dev_path, class: "btn btn-outline-primary" %>
+        <%# else %>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+<div class="cards">
+  <h1>All our Devs</h1>
+  <br>
+  <ul class="cards">
+    <% (@user.devs).each do |dev| %>
+    <li><div class="card-trip">
+      <%= cl_image_tag dev.avatar.key, width: 150, height: 150, crop: :fill %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= dev.name %></h2>
+              <p><%= dev.profile %></p>
+              <p><i class="fa-solid fa-people-roof"></i><%= dev.language%></p>
+          </div>
+            <h2 class="card-trip-pricing"><%= dev.price_per_day%>€</h2>
+          </div>
+        </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
+</div>
