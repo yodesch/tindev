@@ -1,5 +1,5 @@
 class DevsController < ApplicationController
-  before_action :set_dev
+  before_action :set_dev, only: [ :show, :destroy ]
 
   def new
     @dev = Dev.new
@@ -27,7 +27,7 @@ class DevsController < ApplicationController
     @dev = Dev.find(params[:id])
   end
 
-  def user_params
+  def dev_params
     params.require(:dev).permit(:name, :age, :city, :language, :disponibility, :price_per_day, :rating, :avatar_url)
   end
 end
