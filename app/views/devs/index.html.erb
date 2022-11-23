@@ -1,0 +1,27 @@
+<h1>List</h1>
+
+<div class="container">
+  <div class="cards">
+    <h1>All our Devs</h1>
+    <br>
+    <ul class="cards">
+      <% (@devs).each do |dev| %>
+      <li>
+      <%= link_to dev_path(dev) do %>
+          <div class="card-trip", >
+                <%# <%= cl_image_tag dev.avatar.key, width: 150, height: 150, crop: :fill %> 
+                <div class="card-trip-infos">
+                <div>
+                <h2><%= dev.name %></h2>
+                <p><%= dev.profile %></p>
+                <p><i class="fa-solid fa-people-roof"></i><%= dev.language%></p>
+                </div>
+                <h2 class="card-trip-pricing"><%= dev.price_per_day%>€</h2>
+                </div>
+              </div>
+              <% end %>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
