@@ -7,12 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-             <a class="nav-link" <%= link_to "Me connecter",  user_session_path(@user) %></a>
+             <a class="nav-link" <%= link_to "Me connecter", user_session_path(current_user) %></a>
+          </li>
+          <li class="nav-item active">
+             <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :"delete" } %>
           </li>
           <li class="nav-item">
             <a class="nav-link" <%= link_to "Créer un compte", new_user_registration_path(@user) %></a>
-          </li>
-            </div>
           </li>
       </ul>
     </div>
@@ -26,22 +27,12 @@
   </div>
   <div class= "search-block">
     <div class= "search-tab">
-      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-        </div>
-      </form>
-    </div>
-     <div class= "search-tab">
-      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-        </div>
-      </form>
-    </div>
-    <div class= "submit-search">
-      <button type="button" class="btn-submit" data-toggle="button" aria-pressed="false" autocomplete="off">
-      Trouver un dev
-      </button>
+      <%= form_with url: "/", method: :get do |form| %>
+        <%= form.text_field :query, placeholder: "Search a competence" %>
+        <%= form.text_field :query, placeholder: "where ?" %>
+        <%= form.submit "Search", class: "btn btn-outline-success" %>
+      <% end %>
     </div>
   </div>
+</div>
+
