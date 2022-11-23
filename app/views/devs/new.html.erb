@@ -1,71 +1,78 @@
 <div class="new">
-<h1>New Dev</h1>
-<form>
-  <label class="fname">First Name</label>
-  <input type="text" class="square" name="fname">
-</form>
-<form>
-  <label class="fname">Last Name</label>
-  <input type="text" class="square" name="fname">
-</form>
+    <div class="newdevbanner">
+      <h1>New Dev</h1>
+    </div>
+      <br>
+    <div class="divelement">
+  <form>
+      <label class="fname">First Name</label>
+        <br>
+      <input type="text" class="square" name="fname">
+  </form>
+  <form>
+      <label class="fname">Last Name</label>
+        <br>
+      <input type="text" class="square" name="fname">
+  </form>
+
+      <br>
+
+    <div class="form-row">
+      <form>
+    <label class="fname">City</label>
+      <br>
+    <input type="text" class="square" name="fname">
+      </form>
+    </div>
 
 
-<br>
+  <br>
 
-  <div class="form-row">
-    <form>
-  <label class="fname">City</label>
-  <input type="text" class="square" name="fname">
-    </form>
-  </div>
-
-
-<br>
-
-<div class="field is-horizontal">
-  <div class="field-label is-normal">
-    <label class="fname">Spécialité</label>
-  </div>
-  <div class="field-body">
-    <div class="field is-narrow">
-      <div class="control">
-        <div class="select is-fullwidth">
-          <select>
-            <option>FullStack</option>
-            <option>BackEnd</option>
-            <option>FrontEnd</option>
-            <option>JavaScript</option>
-            <option>Rails</option>
-            <option>Je suis une machine</option>
-          </select>
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="fname">Spécialité</label>
+    </div>
+    <div class="field-body">
+      <div class="field is-narrow">
+        <div class="control">
+          <div class="select is-fullwidth">
+            <select>
+              <option>FullStack</option>
+              <option>BackEnd</option>
+              <option>FrontEnd</option>
+              <option>JavaScript</option>
+              <option>Rails</option>
+              <option>Je suis une machine</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<br>
-
-<form>
-  <div class="form-group">
-    <label class="fname">Add a picture</label>
-    <br>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
-</form>
-
-<br>
-
-<div class="description-form">
-    <form>
-  <label class="fname">Tell me more</label>
   <br>
-  <input class="desimput" type="text" id="dname" name="dname">
-    </form>
-  </div>
 
-<br>
-<div class="btn">
- <%= link_to "Add +++", root_path, class: "btn btn-dark"%>
- </div>
- </div>
+  <form>
+    <div class="form-group">
+      <label class="fname">Add a picture</label>
+      <br>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+  </form>
+
+  <br>
+
+  <div class="description-form">
+      <form>
+    <label class="fname">Tell me more</label>
+    <br>
+    <input class="desimput" type="text" id="dname" name="dname">
+      </form>
+    </div>
+
+  <br>
+  <div class="btn">
+  <%= link_to "Add a dev", user_path%>
+    </div>
+   </div>
+</div>
