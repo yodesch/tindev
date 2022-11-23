@@ -1,1 +1,36 @@
-// Specific CSS for your home-page
+.navbar-lewagon {
+  justify-content: space-between;
+  background: #243038;
+  padding: 30px;
+
+  .logo img {
+    height: 64px;
+  }
+
+  .nav-link {
+    background-color: #56aa85; ;
+    width: max-content;
+    color: #243038;
+    border-radius: 25px;
+    margin: 6px;
+    font-size: 16px;
+    padding: 6px 16px;
+  }
+
+  .nav-link:hover {
+    background-color: #30976A
+  }
+}
+
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+body {
+  background: #243038;
+}
