@@ -10,8 +10,9 @@
             <%= cl_image_tag dev.avatar.key, width: 150, height: 150, crop: :fill %>
             <div class="card-trip-infos">
               <h2><%= dev.name %></h2>
-              <h2><i class="fa-solid fa-address-card"></i>  <%= dev.profile %></h2>
-              <h2><i class="fa-solid fa-sitemap"></i>  <%= dev.language%></h2>
+              <h2><i class="fa-solid fa-address-card"></i> <%= dev.profile %></h2>
+              <h2><i class="fa-solid fa-sitemap"></i> <%= dev.language %></h2>
+              <h2><i class="fa-solid fa-star"></i> <%= dev.rating %>/5</h2>
               <h2 class="card-trip-pricing"><%= dev.price_per_day%>€</h2>
             </div>
           </div>
