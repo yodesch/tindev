@@ -1,6 +1,17 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #243038;
+  background-image: url("blacknavbar.svg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+
+  img {
+    margin-bottom: 30px;
+    padding-left: 24px;
+    padding-top: 20px;
+    height: 78px;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
