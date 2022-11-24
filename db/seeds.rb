@@ -267,7 +267,7 @@ dev3.avatar.attach(
 
     dev15 = Dev.create!(
       user_id: user2.id,
-      name: 'Kevin ',
+      name: 'Kevin THOMAS',
       profile: 'front-end',
       price_per_day: 400,
       language: 'HTML, CSS, JS',
