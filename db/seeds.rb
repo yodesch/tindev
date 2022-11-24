@@ -5,10 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Booking.destroy_all
 Dev.destroy_all
 User.destroy_all
 
 user1 = User.create!(email: 'yoanndeschaux@gmail.com', password: 'azerty')
+user2 = User.create!(email: 'jbaubert@hotmail.com', password: 'azerty')
+user3 = User.create!(email: 'justinedicaro@gmail.com', password: 'azerty')
 
 dev1 = Dev.create!(
   user_id: user1.id,
@@ -35,7 +38,7 @@ dev2 = Dev.create!(
   price_per_day: 400,
   language: 'HTML, CSS',
   age: 30,
-  city: "Lyon",
+  city: "Paris",
   disponibility: "true",
   rating: 4,
   avatar_url: "blala"

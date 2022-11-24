@@ -1,7 +1,7 @@
 <h1>Show Dev</h1>
 
 <div class="card-trip">
-   <%#= cl_image_tag @dev.avatar.key, width: 150, height: 150, crop: :fill %>
+   <%= cl_image_tag @dev.avatar.key, width: 150, height: 150, crop: :fill %>
   <div class="card-trip-infos">
     <div>
       <h2><%= @dev.name %></h2>
@@ -20,3 +20,13 @@
 </div>
 <%= link_to "Return to all devs", devs_path %>
 
+
+<h3>Réserver vote date</h3>
+
+
+<%= simple_form_for([@dev, @booking]) do |f| %>
+
+  <%= f.input :date_on %>
+  <%= f.submit 'Réserver' %>
+
+<% end %>

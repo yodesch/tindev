@@ -1,0 +1,26 @@
+<h1>Dashboard</h1>
+
+
+<h2>Mes devs</h2>
+
+  <% current_user.devs.each do |dev| %>
+    <div>
+        <h4><%= dev.name %></h4>
+        <%= cl_image_tag dev.avatar.key %>
+        <ul>
+          <% dev.bookings.each do |booking| %>
+            <%= booking.date_on %>: <%= booking.user.email %>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+
+<h3>Mes reservations</h3>
+
+
+  <% current_user.bookings.each do |booking| %>
+    <div>
+        <%= booking.date_on %>: <%= booking.dev.name %>
+        <%= cl_image_tag booking.dev.avatar.key %>
+    </div>
+  <% end %>

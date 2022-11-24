@@ -1,38 +1,13 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <div>
-      <span class="logo"><%= image_tag 'logo.svg' %></span>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-             <a class="nav-link" <%= link_to "Me connecter", user_session_path(current_user) %></a>
-          </li>
-          <li class="nav-item active">
-             <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :"delete" } %>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" <%= link_to "Créer un compte", new_user_registration_path(@user) %></a>
-          </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="banner">
   <div class="container">
     <h1>Laissez-vous accompagner dans vos projets.</h1>
     <p>Avec Tindev, des millions de Dev' à portée de clic qui n’attendent plus que de rencontrer quelqu’un comme vous.</p>
   </div>
   <div class= "search-block">
     <div class= "search-tab">
-      <%= form_with url: "/", method: :get do |form| %>
+      <%= form_with url: devs_path, method: :get do |form| %>
         <%= form.text_field :query, placeholder: "Search a competence" %>
-        <%= form.text_field :query, placeholder: "where ?" %>
+        <%= form.text_field :city, placeholder: "where ?" %>
         <%= form.submit "Search", class: "btn btn-outline-success" %>
       <% end %>
     </div>
   </div>
-</div>
-

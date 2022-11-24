@@ -12,8 +12,15 @@ class BookingsController < ApplicationController
   end
 
   def create
-
-    
+    @dev = Dev.find(params[:dev_id])
+    @booking = Booking.new(booking_params)
+    @booking.dev = @dev
+    @booking.user = current_user
+    if @booking.save
+      redirect_to dashboard_path
+    else
+      render 'devs/show', status: :unprocessable_entity
+    end
   end
 
   private
