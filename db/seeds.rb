@@ -230,7 +230,7 @@ dev3.avatar.attach(
     )
 
     dev13 = Dev.create!(
-      user_id: user1.id,
+      user_id: user3.id,
       name: 'Gaelle OZANON',
       profile: 'fullstack',
       price_per_day: 500,
