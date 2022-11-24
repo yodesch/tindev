@@ -2,3 +2,113 @@
 @import "home";
 @import "devsnew";
 @import "dashboard";
+@import "components";
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  text-align: left;
+  text-decoration: none;
+  list-style: none;
+}
+
+.card-trip-infos {
+  text-align: left;
+
+}
+
+h1 {
+ padding: 8px;
+ text-align: center;
+ text-justify: distribute;
+}
+
+.card-trip {
+ overflow: hidden;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ width: 350px;
+ margin: 16px;
+
+}
+
+.card-trip > img {
+ height: 250px;
+ width: 100%;
+ object-fit:cover;
+ margin-bottom: 2px;
+}
+
+.card-trip h2 {
+ font-size: 16px;
+ font-weight: bold;
+ margin: 2px;
+ text-decoration: none;
+}
+
+.card-trip p {
+ font-size: 16px;
+ margin: 0;
+ text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: gray;
+}
+
+
+// .card-trip .card-trip-infos {
+//  padding: 16px;
+//  display: flex;
+//  justify-content: space-between;
+//  align-items:flex-end;
+//  position: relative;
+// }
+
+.card-trip-infos .card-trip-user {
+ position: absolute;
+ right: 16px;
+ top: -20px;
+ width: 40px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
