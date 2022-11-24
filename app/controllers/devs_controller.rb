@@ -15,7 +15,7 @@ class DevsController < ApplicationController
 
   def create
     @dev = Dev.new(dev_params)
-    @dev.user = current_user
+    @user = current_user
     if @dev.save
       redirect_to dev_path(@dev)
     else
