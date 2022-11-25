@@ -81,3 +81,5 @@ end
 gem "cloudinary", "~> 1.23"
 
 gem "awesome_print", "~> 1.9"
+
+gem 'date_wrapper'

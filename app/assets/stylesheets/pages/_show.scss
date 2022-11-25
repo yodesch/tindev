@@ -1,0 +1,58 @@
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  text-align: left;
+  text-decoration: none;
+  list-style: none;
+}
+
+.card-trip-infos {
+  text-align: left;
+
+}
+
+h1 {
+ padding: 100px;
+ text-align: center;
+ text-justify: distribute;
+}
+
+.card-trip {
+ overflow: hidden;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ width: 350px;
+ margin: 16px;
+
+}
+
+.card-trip > img {
+ height: 250px;
+ width: 100%;
+ object-fit:cover;
+ margin-bottom: 2px;
+}
+
+.card-trip h2 {
+ font-size: 16px;
+ font-weight: bold;
+ margin: 2px;
+ text-decoration: none;
+}
+
+.card-trip p {
+ font-size: 16px;
+ margin: 0;
+ text-decoration: none;
+}
+
+.cards a {
+  text-decoration: none;
+  color: white;
+}
+
+.cards a:hover {
+  color: gray;
+}

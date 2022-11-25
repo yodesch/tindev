@@ -8,11 +8,14 @@
   </div>
 
   <div class="container">
+    
     <% current_user.devs.each do |dev| %>
+      <%= link_to dev_path(dev) do %>
       <div class="zoom">
         <h4><%= dev.name %></h4>
         <%= cl_image_tag dev.avatar.key %>
       </div>
+      <% end %>
       <ul>
         <% dev.bookings.each do |booking| %>
           <%= booking.date_on %>: <%= booking.user.email %>

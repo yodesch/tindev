@@ -1,32 +1,31 @@
-<h1>Show Dev</h1>
 
-<div class="card-trip">
-   <%= cl_image_tag @dev.avatar.key, width: 150, height: 150, crop: :fill %>
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= @dev.name %></h2>
-        <p><%= @dev.profile %></p>
-        <p><%= @dev.language %></p>
-        <p><%= @dev.age%> <%= @dev.city%></p>
-        <p><%= @dev.rating %></p>
+  <h1>Show Dev</h1>
+<div class="cards">
+  <div class="card-trip">
+    <%= cl_image_tag @dev.avatar.key, width: 150, height: 150, crop: :fill %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @dev.name %></h2>
+          <p><i class="fa-solid fa-address-card"></i> <%= @dev.profile %></p>
+          <p><i class="fa-solid fa-sitemap"></i> <%= @dev.language %></p>
+          <p><i class="fa-solid fa-star"></i> <%= @dev.rating %>/5</p>
+          <p>âge : <%= @dev.age%> ans. ville : <%= @dev.city%></p>
+      </div>
+        <h2 class="card-trip-pricing"><%= @dev.price_per_day%>€/per day</h2>
     </div>
-      <h2 class="card-trip-pricing"><%= @dev.price_per_day%>€</h2>
+    <div>
+      <% if current_user == @dev.user_id %>
+      <%= link_to "Remove", dev_path(@dev), class:"btn btn-link text-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <% end %>
+    </div>
+  <%= link_to "Back to all devs", devs_path, class:"btn btn-success"%>
   </div>
+
   <div>
-    <% if current_user == @dev.user_id %>
-     <%= link_to "Remove", dev_path(@dev), class:"btn btn-link text-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-    <% end %>
+    <h3>Réserver vote date</h3>
+      <%= simple_form_for([@dev, @booking]) do |f| %>
+        <%= f.input :date_on %>
+        <%= f.submit 'Réserver', class:"btn btn-success"%>
+      <% end %>
   </div>
 </div>
-<%= link_to "Return to all devs", devs_path %>
-
-
-<h3>Réserver vote date</h3>
-
-
-<%= simple_form_for([@dev, @booking]) do |f| %>
-
-  <%= f.input :date_on %>
-  <%= f.submit 'Réserver' %>
-
-<% end %>
