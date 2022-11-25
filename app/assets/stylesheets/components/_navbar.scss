@@ -23,6 +23,12 @@
 
 .logoprofil {
   color: #56aa85;
-  font-size: 8px;
-  margin-top: -8px;
+  display: inline-block;
+  width: 50px;
+
+  &:hover {
+    color: #84d5b2;
+  }
+  // font-size: 8px;
+  // margin-top: -8px;
 }
