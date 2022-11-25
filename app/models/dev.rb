@@ -9,4 +9,8 @@ class Dev < ApplicationRecord
   validates :age, presence: true
   validates :language, presence: true
   validates :price_per_day, presence: true
+
+  def unavailable_dates
+    bookings.pluck(:date_on)
+  end
 end
