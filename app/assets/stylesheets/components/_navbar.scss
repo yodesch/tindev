@@ -2,9 +2,8 @@
   justify-content: space-between;
   background-image: url("blacknavbar.svg");
   background-size: cover;
-  position: absolute;
-  top: 0;
   width: 100vw;
+  margin-top: -20px;
 
   img {
     margin-bottom: 30px;
@@ -20,4 +19,10 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.logoprofil {
+  color: #56aa85;
+  font-size: 8px;
+  margin-top: -8px;
 }

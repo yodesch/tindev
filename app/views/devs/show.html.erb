@@ -1,5 +1,4 @@
-
-  <h1>Show Dev</h1>
+<div class="show">
 <div class="cards">
   <div class="card-trip">
     <%= cl_image_tag @dev.avatar.key, width: 150, height: 150, crop: :fill %>
@@ -11,7 +10,7 @@
           <p><i class="fa-solid fa-star"></i> <%= @dev.rating %>/5</p>
           <p>âge : <%= @dev.age%> ans. ville : <%= @dev.city%></p>
       </div>
-        <h2 class="card-trip-pricing"><%= @dev.price_per_day%>€/per day</h2>
+        <h2 class="card-trip-pricing"><%= @dev.price_per_day%>€/jour</h2>
     </div>
     <div>
       <% if current_user == @dev.user_id %>
@@ -32,10 +31,11 @@
 
 
   <div>
-    <h3>Réserver vote date</h3>
+    <h3>Réservez votre dev'date</h3>
       <%= simple_form_for ([@dev, @booking]), data: { controller: 'flatpickr', flatpickr_unavailable_value: @dev.unavailable_dates } do |f| %>
-        <%= f.input :date_on, as: :string, input_html: { data: { flatpickr_target: "dateOn" } } %>
+        <%= f.input :date_on, as: :hidden, input_html: { data: { flatpickr_target: "dateOn" } } %>
         <%= f.submit 'Réserver', class:"btn btn-success" %>
     <% end %>
   </div>
+</div>
 </div>
