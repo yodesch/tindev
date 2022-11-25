@@ -1,6 +1,6 @@
 <div class="dashboard">
   <div>
-    <h1>Dashboard</h1>
+    <h1>Mon dashboard</h1>
   </div>
 
   <div class="mesdevs">
@@ -8,7 +8,7 @@
   </div>
 
   <div class="container">
-    
+
     <% current_user.devs.each do |dev| %>
       <%= link_to dev_path(dev) do %>
       <div class="zoom">
@@ -23,6 +23,7 @@
       </ul>
     <% end %>
   </div>
+
 
   <div class="mesresa">
     <h3>Mes reservations</h3>

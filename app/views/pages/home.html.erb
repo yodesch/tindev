@@ -1,4 +1,4 @@
-<div>
+
   <div class="container">
     <div class="autre">
       <h1 >Laissez-vous accompagner dans vos projets.</h1>
@@ -8,12 +8,15 @@
     <div class= "search-block">
       <div class= "search-tab">
         <%= form_with url: devs_path, method: :get do |form| %>
-          <%= form.text_field :query, placeholder: "Search a competence", class: "border border-light p-1" %>
-          <%= form.text_field :city, placeholder: "where ?", class: "border border-light p-1" %>
-          <%= form.submit "Search", class: "btn btn-success" %>
+          <%= form.text_field :query, placeholder: "Spécialité ?", class: "border border-light p-1" %>
+          <%= form.text_field :city, placeholder: "Quelle ville ?", class: "border border-light p-1" %>
+          <%= form.submit "Recherche", class: "btn" %>
         <% end %>
       </div>
     </div>
     <br><br>
-    <%= link_to "List all Devs", devs_path, class:"btn btn-success" %>
+    <div class="disco">
+   <%= link_to ">> Découvrir tous les devs ", devs_path %>
+    </div>
+  </div>
   </div>

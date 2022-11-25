@@ -15,10 +15,10 @@
     </div>
     <div>
       <% if current_user == @dev.user_id %>
-      <%= link_to "Remove", dev_path(@dev), class:"btn btn-link text-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <%= link_to "Supprimer", dev_path(@dev), class:"btn btn-link text-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
       <% end %>
     </div>
-  <%= link_to "Back to all devs", devs_path, class:"btn btn-success"%>
+  <%= link_to "Retour", devs_path, class:"btn btn-success"%>
   </div>
 
   <%# <div>

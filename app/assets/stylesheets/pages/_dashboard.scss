@@ -4,7 +4,8 @@
   padding-bottom: 30px;
   text-shadow: 1px 1px 2px ;
   font-size: 70px;
-  color: #EEEEEE;
+  color: white;
+  margin-top: 50px;
 }
 
 .dashboard {
@@ -36,13 +37,19 @@
   justify-content: center;
 }
 
+.mesresa .container {
+  display: flex;
+  justify-content: center;
+}
+
 .mesdevs {
 margin-top: 20px;
 margin-bottom: 30px;
 }
 
 .mesresa {
-  margin-top: 60px;
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
 .zoom {
@@ -51,7 +58,7 @@ margin-bottom: 30px;
   transition: transform .2s; /* Animation */
   width: 100px;
   height: 100px;
-  margin: 0 auto;
+  margin: 0px 1rem;
 }
 
 .zoom:hover {

@@ -10,12 +10,12 @@
                     input_html: { autocomplete: "email" } %>
         <%= f.input :password,
                     required: false,
-                    input_html: { autocomplete: "current-password" } %>
+                    input_html: { autocomplete: "Mot de passe" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
       <div class="form-actions">
-        <%= f.submit "Log in", class: 'btn btn-success' %>
+        <%= f.submit "Me connecter", class: 'btn btn-success' %>
       </div>
     <% end %>
 
