@@ -21,11 +21,21 @@
   <%= link_to "Back to all devs", devs_path, class:"btn btn-success"%>
   </div>
 
-  <div>
+  <%# <div>
     <h3>Réserver vote date</h3>
       <%= simple_form_for([@dev, @booking]) do |f| %>
-        <%= f.input :date_on %>
-        <%= f.submit 'Réserver', class:"btn btn-success"%>
-      <% end %>
+        <%# <%= f.input :date_on %>
+        <%# <%= f.submit 'Réserver', class:"btn btn-success"%>
+      <%# <% end %>
+  <%# </div> %>
+<%# </div> %>
+
+
+  <div>
+    <h3>Réserver vote date</h3>
+      <%= simple_form_for ([@dev, @booking]), data: { controller: 'flatpickr', flatpickr_unavailable_value: @dev.unavailable_dates } do |f| %>
+        <%= f.input :date_on, as: :string, input_html: { data: { flatpickr_target: "dateOn" } } %>
+        <%= f.submit 'Réserver', class:"btn btn-success" %>
+    <% end %>
   </div>
 </div>
