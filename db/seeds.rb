@@ -87,7 +87,7 @@ dev3.avatar.attach(
 
   dev5 = Dev.create!(
     user_id: user1.id,
-    name: 'Axel Bertholle',
+    name: 'Axel BERTHOLLE',
     profile: 'front-end',
     price_per_day: 420,
     language: 'HTML, CSS, JS',
@@ -177,7 +177,7 @@ dev3.avatar.attach(
 
   dev10 = Dev.create!(
     user_id: user1.id,
-    name: 'Allan Els',
+    name: 'Allan ELS',
     profile: 'back-end',
     price_per_day: 500,
     language: 'Rails, C++',
